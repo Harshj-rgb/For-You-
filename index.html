@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="screen active">
+        <div class="loading-text">Initializing Love Protocol... 💕</div>
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+        <div class="loading-percentage" id="percentage">0%</div>
+    </div>
+
+    <!-- Desktop Screen -->
+    <div id="desktop-screen" class="screen">
+        <div class="desktop-icon" id="file-icon">
+            <div class="icon-image">📄</div>
+            <div class="icon-label">for_you.txt</div>
+        </div>
+        <div class="desktop-icon" id="trash-icon">
+            <div class="icon-image">🗑️</div>
+            <div class="icon-label">Trash</div>
+        </div>
+    </div>
+
+    <!-- Password Modal -->
+    <div id="password-modal" class="modal">
+        <div class="modal-content">
+            <h2>🔒 File is password protected</h2>
+            <p style="color: #FF69B4; font-weight: 600;">Enter password to continue:</p>
+            <input type="password" id="password-input" placeholder="Enter password...">
+            <div class="error-message" id="error-msg">Wrong password! Try again 💔</div>
+            <button id="unlock-btn">Unlock 💕</button>
+        </div>
+    </div>
+
+    <!-- Main Content Screen -->
+    <div id="main-screen" class="screen">
+        <img id="love-emoji-bg" class="love-emoji-bg" alt="love">
+        <div id="messages-container"></div>
+    </div>
+
+    <!-- Question Screen -->
+    <div id="question-screen" class="screen">
+        <div class="escape-message" id="escape-msg">You can't escape this easily! 😄</div>
+        <div class="question-box">
+            <h1>Will you go on a date with me? 🥺</h1>
+            <div class="button-container">
+                <button class="date-btn yes-btn" id="yes-btn">YES! 💕</button>
+                <button class="date-btn no-btn" id="no-btn">NO 😢</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Choice Screen -->
+    <div id="choice-screen" class="screen">
+        <h2 class="choice-title">Where would you like to go? 💕</h2>
+        <div class="choice-grid">
+            <div class="choice-card" data-choice="pizza">
+                <img id="pizza-img" alt="Pizza">
+                <h3>Pizza 🍕</h3>
+            </div>
+            <div class="choice-card" data-choice="chaat">
+                <img id="chaat-img" alt="Chaat">
+                <h3>Chaat 🥘</h3>
+            </div>
+            <div class="choice-card" data-choice="restaurant">
+                <img id="restaurant-img" alt="Restaurant">
+                <h3>Restaurant 🍽️</h3>
+            </div>
+            <div class="choice-card" data-choice="cafe">
+                <img id="cafe-img" alt="Cafe">
+                <h3>Cafe ☕</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Funny Message Screen -->
+    <div id="funny-screen" class="screen">
+        <div class="funny-content">
+            <h1>Lmao! You really thought you have freedom to choose 😂😂😂</h1>
+            <div class="funny-images">
+                <img id="crying-cat-img" alt="Crying cat">
+                <img id="shy-emoji-img" alt="Shy emoji">
+            </div>
+            <p>I already planned everything! You're stuck with me now 💕</p>
+        </div>
+    </div>
+
+    <!-- Video Screen -->
+    <div id="video-screen" class="screen">
+        <div class="video-content">
+    <h2>Can't wait for our date! 🎬</h2>
+    <div class="video-instructions">
+      <p style="color: #FF69B4; font-size: 18px; margin-bottom: 20px;">📹 Your video is ready to play!</p>
+      <button type="button" class="play-btn" id="play-video-btn" style="display:none;">Play Video 🎬</button>
+    </div>
+    <button class="skip-btn" id="continue-btn">Continue →</button>
+    <div class="goodbye-message" id="goodbye" style="display: none;">See you soon! 💋✨</div>
+</div>
+<!-- Blackout overlay for video playback (hidden by default) -->
+<div id="blackout-overlay" class="blackout-overlay" style="display: none;">
+  <div class="blackout-video-wrapper">
+    <video controls id="blackout-video" class="blackout-video">
+      <source id="video-source" type="video/mp4">
+      Your browser doesn't support HTML5 video
+    </video>
+    <button class="close-video-btn" id="close-video-btn">×</button>
+  </div>
+</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
