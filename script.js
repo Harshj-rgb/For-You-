@@ -36,7 +36,7 @@ const VIDEO_FILE = 'Cute.mp4';       // ← Your final video
 // ==========================================
 // PASSWORD CONFIGURATION
 // ==========================================
-const CORRECT_PASSWORD = "Bunty"; // ← Change to your password
+const CORRECT_PASSWORD = "bunty"; // ← Change to your password
 // ==========================================
 
 
